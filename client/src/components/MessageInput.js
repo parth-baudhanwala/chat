@@ -1,15 +1,18 @@
 function MessageInput({ onSend }) {
   const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       onSend(event.target.value);
-      event.target.value = '';
+      event.target.value = "";
     }
   };
 
   return (
     <div className="box">
       <div className="control">
-        <input className="input" type="text" placeholder="Say something..."
+        <input
+          className="input"
+          type="text"
+          placeholder="Say something..."
           onKeyDown={handleKeyDown}
         />
       </div>
